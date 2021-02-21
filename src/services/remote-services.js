@@ -75,6 +75,28 @@ export class RemoteService {
       return manager1;
     }
   }
+
+  async fetchHistories() {
+    const uri = `https://greenethiopia.net/api/v1/history`;
+    let response = await fetch(uri);
+    let res = await response.json();
+    let manager4;
+    let manager5;
+    let manager6;
+    if (response.status === 200) {
+      let data1 = res["327713"]["current"];
+      let data2 = res["954118"]["current"];
+      let data3 = res["6292826"]["current"];
+      manager4 = historyFromJson(data1);
+      manager5 = historyFromJson(data2);
+      manager6 = historyFromJson(data3);
+      return {
+        manager4,
+        manager5,
+        manager6,
+      };
+    }
+  }
 }
 
 // const baseURL = 'https://greenethiopia.net/api/v1/fpl';
