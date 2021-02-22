@@ -20,4 +20,14 @@ export class DataController{
             this.fetchManagers(),      
             ]
         }
+        // Controller for fetching gameweek events
+    async fetchGameweekEvents(){
+        try{
+            this.gameweekEventList = await new RemoteService().fetchGameweekEvents();
+            if(this.gameweekEventList != null){
+                return this.gameweekEventList;
+            }
+        }catch(e){
+        }
+    }
 }
