@@ -11,4 +11,13 @@ export class DataController{
         this.managersList = [];
         this.historiesManager = {};
     }
+    async fetchAll(){
+        return [
+            this.fetchGameweekEvents(),
+            this.fetchFixtures(),
+            this.fetchElements(),
+            this.fetchTeams(),
+            this.fetchManagers(),      
+            ]
+        }
 }
