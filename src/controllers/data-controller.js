@@ -57,5 +57,21 @@ export class DataController{
         }catch(e){
         }
     }
+    async fetchManagers(){
+        try{
+            this.managersList = await new RemoteService().fetchManagers();
+            this.historiesManager = await new RemoteService().fetchHistories();
+            if(this.managersList != null){
+                this.managersList[0].history = this.historiesManager.manager6.slice(0, 25);
+                this.managersList[1].history = this.historiesManager.manager6.slice(25, 50);
+                this.managersList[2].history = this.historiesManager.manager6.slice(50, );
+                return this.managersList;
+            }
+        }catch(e){
+
+        }
+    }
 
 }
+
+export let dataController = new DataController();
