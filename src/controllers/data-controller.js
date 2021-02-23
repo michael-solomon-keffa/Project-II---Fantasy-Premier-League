@@ -39,5 +39,14 @@ export class DataController{
         }catch(e){
         }
     }
+    async fetchFixtures(){
+        try{
+            this.fixturesList = await new RemoteService().fetchFixtures();
+            if(this.fixturesList != null){
+                return this.fixturesList;
+            }
+        }catch(e){
+        }
+    }
 
 }
