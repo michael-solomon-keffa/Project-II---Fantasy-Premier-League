@@ -48,5 +48,14 @@ export class DataController{
         }catch(e){
         }
     }
+    async fetchTeams(){
+        try{
+            this.teamsList = await new RemoteService().fetchTeams();
+            if(this.teamsList != null){
+                return this.teamsList;
+            }
+        }catch(e){
+        }
+    }
 
 }
