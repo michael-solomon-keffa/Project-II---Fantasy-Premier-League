@@ -30,4 +30,14 @@ export class DataController{
         }catch(e){
         }
     }
+    async fetchElements(){
+        try{
+            this.elementList = await new RemoteService().fetchElements();
+            if(this.elementList != null){
+                return this.elementList;
+            }
+        }catch(e){
+        }
+    }
+
 }
