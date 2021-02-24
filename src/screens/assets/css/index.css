@@ -1,0 +1,287 @@
+.clublist{
+    list-style: none;
+    margin: 0px;
+    width: 80%;
+}
+
+.clublist li{
+    float:left;
+    margin-left: 2px;
+    padding: 5px;
+    color: #fff;
+    font-family: trebuchet ms;
+    font-size: 19px;
+    font-weight: lighter;
+    text-align: justify;
+    word-wrap:break-word;
+}
+
+.clubitem:hover{
+    transform: scale(1.25);
+}
+
+.profileimage img{
+    border-radius: 50%;
+}
+
+.sidenavigation a:hover{
+    border-left: 4px solid #FE035D;
+}
+
+.gameweektitle{
+    font-size: 32px;
+}
+
+.score{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.score-title{
+    color: grey;
+    font-size: 14px;
+}
+
+.gameweekscore{
+    background-color: #FE035D;
+    padding: 1px 10px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.check{
+    background-color: grey;
+}
+
+#page-content-wrapper{
+    background: #ECF2F6;
+}
+
+.pointsbox{
+    background: white;
+}
+
+/* first card box texts */
+.pointhistorytext{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.yourpointtext, .totalpoint{
+    font-size: 15px;
+    color: lightgrey;
+}
+
+.averagepointtext{
+    font-size: 14px;
+    color: lightgrey;
+}
+
+.overallpoints, .averagepoint, .manageraverage{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pointsbox{
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(224,237,243);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(224,237,243); 
+    box-shadow:         3px 3px 5px 6px rgb(224,237,243);
+    height: 350px;
+}
+
+.starplayer{
+    background: #FD6192;
+    height: 150px;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(224,237,243);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(224,237,243); 
+    box-shadow:         3px 3px 5px 6px rgb(224,237,243);
+}
+
+.mostrransfer{
+    background: white;
+    height: 90px;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(224,237,243);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(224,237,243); 
+    box-shadow:         3px 3px 5px 6px rgb(224,237,243);
+}
+
+.mostcaptained{
+    background: white;
+    min-height: 90px;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(224,237,243);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(224,237,243); 
+    box-shadow:         3px 3px 5px 6px rgb(224,237,243);
+}
+
+.deadlinecounter{
+    background: white;
+    border-radius: 10px;
+    height: 350px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(224,237,243);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(224,237,243); 
+    box-shadow:         3px 3px 5px 6px rgb(224,237,243);
+}
+
+.countdown{
+    background: white;
+    height: 200px;
+}
+
+.injuredplayers{
+    height: 150px;
+    background: #F1F4F7;
+    border-radius: 10px;
+}
+
+
+/* NEWS SECTION */
+.newsSection{
+    background: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(224,237,243);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(224,237,243); 
+    box-shadow:         3px 3px 5px 6px rgb(224,237,243);
+}
+
+.newsHeadline{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+    height: 175px;  
+    background-color: #FE035D;
+    border-radius: 10px;
+}
+
+.newsDescription{
+    height: 150px;
+    border-radius: 10px;
+}
+
+.newsimage{
+    width: 100px;
+    height: 100px;
+}
+
+.newsclock{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.newstime{
+    padding-left: 30px;
+}
+
+.newsduration{
+    padding-left: 120px;
+}
+
+/* Transfer in and out stat */
+.transferinandout{
+    background: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(224,237,243);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(224,237,243); 
+    box-shadow:         3px 3px 5px 6px rgb(224,237,243);
+}
+
+/* Fixtures */
+.fixturedate{
+    color: #FE035D;
+}
+
+.fixturebox{
+    height: 100px;
+    background: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(224,237,243);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(224,237,243); 
+    box-shadow:         3px 3px 5px 6px rgb(224,237,243);
+}
+
+.fixturebox:hover{
+    border-left: 10px solid #36023B;
+    transform: scale(1.08);
+}
+
+.fixtureseemore{
+    margin-left: 270px;
+}
+
+.hometeam{
+    padding-right: 0;
+}
+
+.awayteam{
+    padding-left: 0;
+}
+
+.versus{
+    font-weight: bold;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fixturetime{
+    font-size: 22px;
+    color: #FE035D;
+    font-weight: bold;
+}
+
+.fixtureplace{
+    font-size: 12px;
+}
+
+/* Basic Information */
+.mostrransfer{
+    min-width: 90px;
+}
+.mosttransferredin{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.mostcaptainedin{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.starplayertitle{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.starplayerfirstname{
+    color: #fff;
+    font-size: 12px;
+    padding-bottom: 0;
+}
+
+.starplayerlastname{
+    padding-top: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.starplayerteam{
+    color: #fff;
+    font-size: 12px;
+}
+
+.starplayerpoints{
+    color: #fff;
+    font-size: 28px;
+}
+
+/* Table style */
+.leaguetable{
+    border-collapse: collapse;
+}
+.bottom-border { border-bottom: 1px dashed black; }
