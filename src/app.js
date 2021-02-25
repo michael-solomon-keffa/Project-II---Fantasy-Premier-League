@@ -40,3 +40,9 @@ const profile = document.querySelector(".profile");
 
 // League
 const leagues = document.querySelector(".leaguetable");
+
+const urlParams = new URLSearchParams(window.location.search);
+let gameweekpage = parseInt(urlParams.get("gameweekpage"));
+if (!gameweekpage) {
+  gameweekpage = 0;
+}
