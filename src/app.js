@@ -46,3 +46,11 @@ let gameweekpage = parseInt(urlParams.get("gameweekpage"));
 if (!gameweekpage) {
   gameweekpage = 0;
 }
+
+// Authentication table
+let authenicatedManager = urlParams.get("managerId");
+let managerIdentity = {
+  "327713" : 0,
+  "954118" : 1,
+  "6292826" : 2
+}
