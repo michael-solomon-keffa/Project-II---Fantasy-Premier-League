@@ -1,4 +1,6 @@
-import { dataController } from "./controllers/data-controller.js";
+import {
+    dataController
+} from "./controllers/data-controller.js";
 
 //getting ids
 const gameweekName = document.querySelector(".gameweektitle");
@@ -44,13 +46,38 @@ const leagues = document.querySelector(".leaguetable");
 const urlParams = new URLSearchParams(window.location.search);
 let gameweekpage = parseInt(urlParams.get("gameweekpage"));
 if (!gameweekpage) {
-  gameweekpage = 0;
+    gameweekpage = 0;
 }
 
 // Authentication table
 let authenicatedManager = urlParams.get("managerId");
 let managerIdentity = {
-  "327713" : 0,
-  "954118" : 1,
-  "6292826" : 2
+    "327713": 0,
+    "954118": 1,
+    "6292826": 2
 }
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+let view = async function () {
+    let overallData = await dataController.fetchAll();
+
+    let events = await await overallData[0];
+    let elements = await overallData[2];
+    let fixtures = await overallData[1];
+    let teams = await overallData[3];
+    let managers = await overallData[4];
+    // Starplayer
+    elements.sort((a, b) => (a.id > b.id) ? 1 : -1);
+
+    //Gameweek 1 is at index 0 -> Applies for all
+    gameweekName.textContent = events[gameweekpage].name;
+    gameweekTime.textContent = new Date(events[gameweekpage].deadline_time).toDateString();
+    averageScore.textContent = events[gameweekpage].average_entry_score;
+    highestScore.textContent = events[gameweekpage].highest_score;
+
+}
+
+view();
