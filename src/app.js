@@ -187,6 +187,88 @@ let view = async function () {
             </div>
         </div>`;
     });
+
+      // while(fixtures[thisEvent].event == y){
+    //   eventLength++
+    // }
+
+  gameweekFixtures.innerHTML = homeDiv;
+
+  // Set the date we're counting down to
+  var countDownDate = new Date(events[26].deadline_time).getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.querySelector(".newsHeadline").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.querySelector(".newsHeadline").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+
+  document.querySelector(".newsDescription").innerHTML = `<div class="pt-3 pl-5">
+    Next Gameweek : ${events[26].name} <br>
+    Until ${new Date(events[26].deadline_time).toDateString()} <br>
+    Time Zone : London, England
+  </div>`
+
+
+  // Logic to calculate the average of player
+  let managerOnePoints = managers[0].history.map((x) => x.points)
+  let sum = managers[managerIdentity[authenicatedManager]].history.reduce((acc, current) => {
+    return current.points + acc
+  }, 0);
+
+  let average = sum / 25;
+  manageraverage.textContent = average;
+
+
+  // Chart
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+          labels: ['GW1', 'GW2', 'GW3', 'GW4', 'GW5', 'GW6', 'GW7','GW8', 'GW9', 'GW10', 'GW11', 'GW12', 'GW13', 'GW14','GW15', 'GW16', 'GW17', 'GW18', 'GW19', 'GW20', 'GW21','GW22', 'GW23', 'GW24', 'GW25'],
+          datasets: [{
+              label: `${managers[0].player_first_name}'s point history`,
+              backgroundColor: 'rgb(255, 99, 132, 0.5)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: managerOnePoints
+          }]
+      },
+
+      // Configuration options go here
+      options: {
+        layout: {
+          padding: {
+              left: 5,
+              right: 5,
+              top: 10,
+              bottom: 5
+          }
+      }
+      }
+  });
 }
 
 view();
