@@ -78,6 +78,32 @@ let view = async function () {
     averageScore.textContent = events[gameweekpage].average_entry_score;
     highestScore.textContent = events[gameweekpage].highest_score;
 
+    mosttransferredin.textContent = elements[events[gameweekpage].most_transferred_in - 1].first_name + " " + elements[events[gameweekpage].most_transferred_in - 1].second_name;
+    mosttransferredinplayer.innerHTML = `<img src=${teams[elements[events[gameweekpage].most_transferred_in - 1].team - 1].jersey}>`;
+    mostcaptainedin.textContent =elements[events[gameweekpage].most_captained - 1].first_name +" " +elements[events[gameweekpage].most_captained - 1].second_name;
+    mostcaptainedinplayer.innerHTML = `<img src=${teams[elements[events[gameweekpage].most_captained - 1].team - 1].jersey}>`;
+  
+  
+  
+    starplayertitle.textContent = `GW ${events[gameweekpage].id} star player`;
+    starplayerjersey.innerHTML = `<img src=${teams[elements[events[gameweekpage].top_element - 1].team - 1].jersey}>`;
+    starplayerfirstname.textContent = elements[events[gameweekpage].top_element - 1].first_name;
+    starplayerlastname.textContent = elements[events[gameweekpage].top_element - 1].second_name;
+    starplayerteam.textContent = "⚪ " + teams[elements[events[gameweekpage].top_element].team - 1].name;
+    starplayerpoints.textContent = events[gameweekpage].top_element_info.points + " " + "points";
+  
+    // Managers
+    managername.textContent = managers[managerIdentity[authenicatedManager]].player_first_name + ' ' + managers[managerIdentity[authenicatedManager]].player_last_name;
+    managernickname.textContent = managers[managerIdentity[authenicatedManager]].name;
+    managerfavouriteteam.textContent = teams[managers[managerIdentity[authenicatedManager]].favourite_team - 1].name;
+    manageroverallpoint.textContent = managers[managerIdentity[authenicatedManager]].summary_overall_points;
+    managerrank.textContent = managers[managerIdentity[authenicatedManager]].summary_overall_rank;
+  
+    overallpoint.textContent = managers[managerIdentity[authenicatedManager]].summary_overall_points;
+    
+    gameweekscore.textContent = managers[managerIdentity[authenicatedManager]].history[24 - gameweekpage].points;
+    gameweekonlyrank.textContent = numberWithCommas(managers[managerIdentity[authenicatedManager]].history[24 - gameweekpage].rank);
+  
 }
 
 view();
