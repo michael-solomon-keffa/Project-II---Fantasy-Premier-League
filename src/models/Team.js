@@ -35,29 +35,6 @@ let emblem = {
   Wolves: "https://resources.premierleague.com/premierleague/badges/50/t39.png",
 };
 
-let arena = {
-  Arsenal: "Emirates Stadium",
-  "Aston Villa": "Villa Park",
-  Brighton: "American Express",
-  Burnley: "Turf Moor",
-  Chelsea: "Stamford Bridge",
-  "Crystal Palace": "Selhurst Park",
-  Everton: "Goodison Park",
-  Fulham: "Craven Cottage",
-  Leeds: "Elland Road",
-  Leicester: "King Power",
-  Liverpool: "Anfield",
-  "Man City": "Eithad",
-  "Man Utd": "Old Trafford",
-  Newcastle: "St. James' Park",
-  "Sheffield Utd": "Bramall Lane",
-  Southampton: "St Mary",
-  Spurs: "Tottenham Hotspur",
-  "West Brom": "Albion Park",
-  "West Ham": "London Stadium",
-  Wolves: "Molineux Stadium",
-};
-
 let jersey = {
   Arsenal:
     "https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3-66.webp",
