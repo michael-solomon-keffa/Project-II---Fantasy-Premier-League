@@ -238,7 +238,7 @@ let view = async function () {
 
 
   // Logic to calculate the average of player
-  let managerOnePoints = managers[0].history.map((x) => x.points)
+  let managerOnePoints = managers[managerIdentity[authenicatedManager]].history.map((x) => x.points)
   let sum = managers[managerIdentity[authenicatedManager]].history.reduce((acc, current) => {
     return current.points + acc
   }, 0);
@@ -257,7 +257,7 @@ let view = async function () {
       data: {
           labels: ['GW1', 'GW2', 'GW3', 'GW4', 'GW5', 'GW6', 'GW7','GW8', 'GW9', 'GW10', 'GW11', 'GW12', 'GW13', 'GW14','GW15', 'GW16', 'GW17', 'GW18', 'GW19', 'GW20', 'GW21','GW22', 'GW23', 'GW24', 'GW25'],
           datasets: [{
-              label: `${managers[0].player_first_name}'s point history`,
+              label: `${managers[managerIdentity[authenicatedManager]].player_first_name}'s point history`,
               backgroundColor: 'rgb(255, 99, 132, 0.5)',
               borderColor: 'rgb(255, 99, 132)',
               data: managerOnePoints
