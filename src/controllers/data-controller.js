@@ -11,7 +11,6 @@ export class DataController{
         this.managersList = [];
         this.historiesManager = {};
     }
-
     async fetchAll(){
         return [
             this.fetchGameweekEvents(),
@@ -33,7 +32,6 @@ export class DataController{
         }catch(e){
         }
     }
-
     async fetchElements(){
         try{
             this.elementList = await new RemoteService().fetchElements();
@@ -43,7 +41,6 @@ export class DataController{
         }catch(e){
         }
     }
-
     async fetchFixtures(){
         try{
             this.fixturesList = await new RemoteService().fetchFixtures();
@@ -53,7 +50,6 @@ export class DataController{
         }catch(e){
         }
     }
-
     async fetchTeams(){
         try{
             this.teamsList = await new RemoteService().fetchTeams();
@@ -63,7 +59,6 @@ export class DataController{
         }catch(e){
         }
     }
-
     async fetchManagers(){
         try{
             this.managersList = await new RemoteService().fetchManagers();

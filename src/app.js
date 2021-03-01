@@ -60,11 +60,9 @@ function numberWithCommas(x) {
 }
 
 
-
 //Ultimate data controller
 let view = async function () {
   let overallData = await dataController.fetchAll();
-
 
   let events = await await overallData[0];
   let elements = await overallData[2];
@@ -85,7 +83,6 @@ let view = async function () {
   mosttransferredinplayer.innerHTML = `<img src=${teams[elements[events[gameweekpage].most_transferred_in - 1].team - 1].jersey}>`;
   mostcaptainedin.textContent =elements[events[gameweekpage].most_captained - 1].first_name +" " +elements[events[gameweekpage].most_captained - 1].second_name;
   mostcaptainedinplayer.innerHTML = `<img src=${teams[elements[events[gameweekpage].most_captained - 1].team - 1].jersey}>`;
-
 
 
   starplayertitle.textContent = `GW ${events[gameweekpage].id} star player`;
@@ -236,7 +233,6 @@ let view = async function () {
     Time Zone : London, England
   </div>`
 
-
   // Logic to calculate the average of player
   let managerOnePoints = managers[managerIdentity[authenicatedManager]].history.map((x) => x.points)
   let sum = managers[managerIdentity[authenicatedManager]].history.reduce((acc, current) => {
@@ -245,7 +241,6 @@ let view = async function () {
 
   let average = sum / 25;
   manageraverage.textContent = average;
-
 
   // Chart
   var ctx = document.getElementById('myChart').getContext('2d');
@@ -277,6 +272,5 @@ let view = async function () {
       }
   });
 }
-
 
 view();
