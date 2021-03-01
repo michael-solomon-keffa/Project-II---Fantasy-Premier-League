@@ -53,7 +53,7 @@ export class RemoteService{
     async fetchFixtures(){
                 //Two URI's are provided - we provided one backup of identical data as the original one to be more consistent and decrease risk of failure 
 
-        const baseUri = `https://fantasy.premierleague.com/api/bootstrap-static/`;
+        const baseUri = ` https://fantasy.premierleague.com/api/fixtures/`;
         const backupUri = `https://greenethiopia.net/api/v1/fixtures`;
         let response;
         try{
