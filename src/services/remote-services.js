@@ -5,10 +5,21 @@ import {teamsFromJson} from '../models/Team.js';
 import {managersFromJson, historyFromJson} from '../models/Manager.js';
 
 export class RemoteService{
+    
     //Return the gameweek events mapping each gameweek to our own Gameweek Object
     async fetchGameweekEvents(){
-        const uri = `https://greenethiopia.net/api/v1/fpl`;
-        let response = await fetch(uri);
+        
+        //Two URI's are provided - we provided one backup of identical data as the original one to be more consistent and decrease risk of failure 
+        const baseUri = `https://fantasy.premierleague.com/api/bootstrap-static/`;
+        const backupUri = `https://greenethiopia.net/api/v1/fpl`;
+        let response;
+        try{
+            response = await fetch(baseUri);
+            
+        }catch(e){
+            response = await fetch(backupUri);
+        }
+       
         let res = await response.json();
         if(response.status === 200){
             let data = res["obj"]["events"]
@@ -19,8 +30,17 @@ export class RemoteService{
     }
 
     async fetchElements(){
-        const uri = `https://greenethiopia.net/api/v1/fpl`;
-        let response = await fetch(uri);
+                //Two URI's are provided - we provided one backup of identical data as the original one to be more consistent and decrease risk of failure 
+
+        const baseUri = `https://fantasy.premierleague.com/api/bootstrap-static/`;
+        const backupUri = `https://greenethiopia.net/api/v1/fpl`;
+        let response;
+        try{
+            response = await fetch(baseUri);
+            
+        }catch(e){
+            response = await fetch(backupUri);
+        }
         let res = await response.json();
         if(response.status === 200){
             let data = res["obj"]["elements"]
@@ -31,8 +51,17 @@ export class RemoteService{
     }
 
     async fetchFixtures(){
-        const uri = `https://greenethiopia.net/api/v1/fixtures`;
-        let response = await fetch(uri);
+                //Two URI's are provided - we provided one backup of identical data as the original one to be more consistent and decrease risk of failure 
+
+        const baseUri = `https://fantasy.premierleague.com/api/bootstrap-static/`;
+        const backupUri = `https://greenethiopia.net/api/v1/fixtures`;
+        let response;
+        try{
+            response = await fetch(baseUri);
+            
+        }catch(e){
+            response = await fetch(backupUri);
+        }
         let res = await response.json();
         if(response.status === 200){
             let data = res
@@ -43,8 +72,17 @@ export class RemoteService{
     }
 
     async fetchTeams(){
-        const uri = `https://greenethiopia.net/api/v1/fpl`
-        let response = await fetch(uri);
+                //Two URI's are provided - we provided one backup of identical data as the original one to be more consistent and decrease risk of failure 
+
+        const baseUri = `https://fantasy.premierleague.com/api/bootstrap-static/`;
+        const backupUri = `https://greenethiopia.net/api/v1/fpl`;
+        let response;
+        try{
+            response = await fetch(baseUri);
+            
+        }catch(e){
+            response = await fetch(backupUri);
+        }
         let res = await response.json();
         if(response.status === 200){
             let data = res['obj']['teams']
@@ -60,8 +98,17 @@ export class RemoteService{
     // }
 
     async fetchManagers(){
-        const uri = `https://greenethiopia.net/api/v1/managers`;
-        let response = await fetch(uri);
+                //Two URI's are provided - we provided one backup of identical data as the original one to be more consistent and decrease risk of failure 
+
+        const baseUri = `https://fantasy.premierleague.com/api/bootstrap-static/`;
+        const backupUri = `https://greenethiopia.net/api/v1/managers`;
+        let response;
+        try{
+            response = await fetch(baseUri);
+            
+        }catch(e){
+            response = await fetch(backupUri);
+        }
         let res = await response.json();
         let manager1;
         let manager2;
@@ -77,8 +124,17 @@ export class RemoteService{
     }
 
     async fetchHistories(){
-        const uri = `https://greenethiopia.net/api/v1/history`;
-        let response = await fetch(uri);
+                //Two URI's are provided - we provided one backup of identical data as the original one to be more consistent and decrease risk of failure 
+
+        const baseUri = `https://fantasy.premierleague.com/api/bootstrap-static/`;
+        const backupUri = `https://greenethiopia.net/api/v1/history`;
+        let response;
+        try{
+            response = await fetch(baseUri);
+            
+        }catch(e){
+            response = await fetch(backupUri);
+        }
         let res = await response.json();
         let manager4;
         let manager5;
