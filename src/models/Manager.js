@@ -1,4 +1,5 @@
 
+
 class Manager{
     constructor(parsedJson){
         //From basic info

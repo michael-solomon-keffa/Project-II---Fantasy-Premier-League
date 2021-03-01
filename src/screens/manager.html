@@ -11,13 +11,440 @@
     <link rel="stylesheet" href="./assets/css/sidebar.css">
 </head>
 <body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center mt-5">
+                <div class="profileimage">
+                    <div class="row">
+                        <div id="prevview" class="col-sm-6">
+                            <a href="./manager.html?page=1">Prev.</a>
+                        </div>
+                        <div id="nextview" class="col-sm-6">
+                            <a href="./manager.html?page=2" id="nextgameweek">Next</a>
+                        </div>
+                    </div>
+                    <span class="profile"></span>
+                    <p class="mt-3 font-weight-bold managername" style="margin-bottom: 0px;"></p>
+                    <p class="managernickname" style="margin-top: 4px; margin-bottom: 0px;"></p>
+                    <p style="margin-top: 2px;" class="managerfavouriteteam">🇪🇹</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p style="margin-bottom: 0px;" class="manageroverallpoint"></p>
+                            <p style="margin-top: 2px; font-size: 12px; font-weight: bold;">Total Points</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p style="margin-bottom: 0px;" class="managerrank"></p>
+                            <p style="margin-top: 2px; font-size: 12px; font-weight: bold;">Overall Ranking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group list-group-flush sidenavigation">
+                <div style="height: 1px; background-color: lightgrey;"></div>
+                <a href="#" class="list-group-item list-group-item-action">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-windows"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overview</a>
+              
+            </div>
+        </div>
+        <!-- Main Content View -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg border-bottom">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="clublist mt-2 mt-lg-0" role="menu">
+                    <!-- Arsenal -->
+                    <li class="clubitem">
+                        <a href="http://www.arsenal.com?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t3.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Aston Villa -->
+                    <li class="clubitem">
+                        <a href="https://www.avfc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t7.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Brighton and Hove Albion -->
+                    <li class="clubitem">
+                        <a href="https://www.brightonandhovealbion.com?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t36.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Burnley -->
+                    <li class="clubitem">
+                        <a href="http://www.burnleyfootballclub.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t90.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Chelsea -->
+                    <li class="clubitem">
+                        <a href="https://www.chelseafc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t8.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Crystal Palace -->
+                    <li class="clubitem">
+                        <a href="http://www.cpfc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t31.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Everton -->
+                    <li class="clubitem">
+                        <a href="http://www.evertonfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t11.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Fulham -->
+                    <li class="clubitem">
+                        <a href="http://www.fulhamfc.com?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t54.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Leeds -->
+                    <li class="clubitem">
+                        <a href="http://www.leedsunited.com?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t2.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Leicester City -->
+                    <li class="clubitem">
+                        <a href="http://www.lcfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t13.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Liverpool -->
+                    <li class="clubitem">
+                        <a href="http://www.liverpoolfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t14.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Manchester City -->
+                    <li class="clubitem">
+                        <a href="https://www.mancity.com?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t43.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Manchester United -->
+                    <li class="clubitem">
+                        <a href="http://www.manutd.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t1.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Newcastle United -->
+                    <li class="clubitem">
+                        <a href="https://www.nufc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t4.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Sheffield United -->
+                    <li class="clubitem">
+                        <a href="https://www.sufc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t49.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Southampton -->
+                    <li class="clubitem">
+                        <a href="https://www.southamptonfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t20.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Tottenham / Spurs-->
+                    <li class="clubitem">
+                        <a href="https://www.southamptonfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t6.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- West bromich albion -->
+                    <li class="clubitem">
+                        <a href="http://www.wba.co.uk?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t35.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Westham -->
+                    <li class="clubitem">
+                        <a href="http://www.whufc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t21.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Wolverhampton Wanderers -->
+                    <li class="clubitem">
+                        <a href="https://www.wolves.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link" class="menuitem" target="_blank">
+                            <div class="badge badge--small badge-image-container" data-size="25" data-widget="club-badge-image">
+                                <img src="https://resources.premierleague.com/premierleague/badges/25/t39.png" class="badge-image badge-image--25 js-badge-image" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>        
+              </div>
+            </nav>      
+       
+            <div class="container-fluid ml-3 mt-5 background-color-theme">
+                <!-- First Section -->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="row"> 
+                            <!-- Gameweek title -->
+                            <div class="col-sm-12 font-weight-bold gameweektitle"></div>
+                        </div>
+                        <div class="row">
+                            <!-- Gameweek time -->
+                            <div class="col-sm-12 text-muted gameweektime"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="row">
+                                    <div class="col-sm-12 score">
+                                        <span class="gameweekscore"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 score-title">
+                                        Your final point
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <!-- Average Score -->
+                                <div class="row">
+                                    <div class="col-sm-12 score averagepoint">
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 score-title">
+                                        Average Point
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <!-- Highest Point -->
+                                <div class="row">
+                                    <div class="col-sm-12 score highestpoint">
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 score-title">
+                                        Highest point
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row">
+                                    <div class="col-sm-12 score gameweekonlyrank">
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 score-title">
+                                        Gameweek rank
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Section -->
+                <div class="row mt-5">
+                    <!-- Left -->
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-6 pointsbox ml-4">
+                               
+                                <!-- Second line -->
+                                <div class="row pt-4 pl-2">
+                                    <div class="col-sm-4">
+                                        <div class="row">
+                                            <div class="col-sm-12 overallpoints">
+                                                
+                                            </div>
+                                            <div class="col-sm-12 totalpoint">
+                                                Total points
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <div class="row">
+                                            <div class="col-sm-12 manageraverage">
+                                                
+                                            </div>
+                                            <div class="col-sm-12 totalpoint">
+                                                Avg. points per GW
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                            <div class="col-sm-5 ml-4">
+                                <div class="row">
+                                    <div class="col-sm-12 starplayer mb-2">   
+                                        <div class="row">
+                                            <div class="col-sm-12 starplayertitle"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5 starplayerjersey ml-5 mt-2">
+
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-12 starplayerfirstname"></div>
+                                                    <div class="col-sm-12 starplayerlastname"></div>
+                                                    <div class="col-sm-12 starplayerteam"></div>
+                                                    <div class="col-sm-12 starplayerpoints"></div>
+                                                </div>
+                                            </div>
+                                        </div>                         
+                                    </div>
+                                    <div class="col-sm-12 mostrransfer mb-2">     
+                                        <div class="row">
+                                            <div class="col-sm-9">
+                                                <div class="row mt-3 ml-2">
+                                                    <div class="col-sm-12 text-muted" style="font-size: 12px; font-weight: bold;">Most Transferred in</div>
+                                                    <div class="col-sm-12 mosttransferredin"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 mosttransferredinplayer">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mostcaptained">       
+                                        <div class="row">
+                                            <div class="col-sm-9">
+                                                <div class="row mt-3 ml-2">
+                                                    <div class="col-sm-12 text-muted" style="font-size: 12px; font-weight: bold;">Most Captained</div>
+                                                    <div class="col-sm-12 mostcaptainedin"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 mostcaptainedinplayer">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                        <div class="row mt-5">
+                            <!-- Left Side -->
+                            <div class="col-sm-5 ml-4">
+                                <div class="row newsSection">
+                                    <div class="col-sm-12 newsHeadline pt-5 pl-5">
+                                    </div>
+                                    <div class="col-sm-12 newsDescription">
+                                        
+                                    </div>
+                                </div>
+                        
+                            </div>
+                            <div class="col-sm-6 ml-4 transferinandout">
+                                <table class="leaguetable">
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right / Fixture List -->
+                    <div class="col-sm-3">
+                        <h5>Next fixtures</h5>
+                        <h6 class="fixturedate">Wednesday, February 10 2021</h6>
+                        <div id="fixtures">
+
+                        </div>
+                       
+                    </div>
+                </div>
 
 
+
+            
+                
+                   
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        let authenicatedManager = urlParams.get("managerId");
+
+        let gameweekpage = parseInt(urlParams.get("gameweekpage"));
+        if(!gameweekpage){
+            gameweekpage = 0;
+        }
+        let prev = gameweekpage;
+        let next = gameweekpage;
+
+        const prevview = document.querySelector('#prevview')
+        const nextview = document.querySelector('#nextview')
+
+        if (gameweekpage >= 1) {
+            prev -= 1
+        }
+        if (gameweekpage < 37) {
+            next += 1
+        }
+
+        prevview.firstElementChild.setAttribute("href", `./manager.html?gameweekpage=${prev}&managerId=${authenicatedManager}`)
+        nextview.firstElementChild.setAttribute("href", `./manager.html?gameweekpage=${next}&managerId=${authenicatedManager}`)
+
+    </script>
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     <script type="module" src="../app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 </body>
 </html>
